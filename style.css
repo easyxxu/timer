@@ -7,6 +7,7 @@
 }
 body {
   font-family: "Pretendard-Regular";
+  height: 100vh;
   background: radial-gradient(
     96.74% 276.79% at 3.59% 5.28%,
     #f0f4ff 0%,
@@ -19,6 +20,15 @@ h2,
 h3,
 p {
   margin: 0;
+}
+input {
+  border: 0;
+  background: inherit;
+  padding: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 button {
   border: 0;
@@ -73,6 +83,44 @@ main {
   gap: 4px;
   color: #a5b6ee;
   font-size: 12px;
+  position: relative;
+}
+.hour,
+.min,
+.sec {
+  font-size: 40px;
+  color: #fff;
+  width: 53px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(33%, 76%);
+  -webkit-transform: translate(33%, 76%);
+  -moz-transform: translate(33%, 76%);
+  -ms-transform: translate(33%, 76%);
+  -o-transform: translate(33%, 76%);
+}
+.count-box .min-box {
+  position: relative;
+}
+.count-box .min-box::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 26px;
+  top: 47%;
+  left: -17%;
+  background: url(./img/dot.png) no-repeat;
+}
+.count-box .min-box::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 26px;
+  top: 47%;
+  right: -17%;
+  background: url(./img/dot.png) no-repeat;
 }
 .btn-box .btn:first-child {
   margin-right: 12px;
